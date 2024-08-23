@@ -16,12 +16,23 @@ internal class Program
         {
             if (opcao == 1)
             {
+                int qtd;
                 Console.WriteLine("Digite o nome do produto:");
                 string nome = Console.ReadLine()!;
-                Console.WriteLine("Digite a quantidade do produto que você quer adicionar:");
-                string quantidade = Console.ReadLine()!;
+                while(nome.Count() < 3)
+                {
+                    Console.WriteLine("Nome precisa ter no mínimo 3 caracteres!");
+                    Console.WriteLine("Digite o nome do produto:");
+                    nome = Console.ReadLine()!;
+                }
 
-                Produto item = new Produto(produtos.Count() + 1, nome, int.Parse(quantidade));
+                Console.WriteLine("Digite a quantidade do produto que você quer adicionar:");
+                while(!int.TryParse(Console.ReadLine()!, out qtd) || qtd < 1)
+                {
+                    Console.WriteLine("Digite um número maior que zero!");
+                }
+                
+                Produto item = new Produto(produtos.Count() + 1, nome, qtd);
                 produtos.Add(item);
             }
             else if (opcao == 2 && produtos.Count() >= 1) {
