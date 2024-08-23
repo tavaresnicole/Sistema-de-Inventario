@@ -8,13 +8,13 @@
 <h2>Funcionalidades</h2>
 <ul>
   <li>
-    Adicionar Produto: Permite adicionar um novo produto ao inventário, informando o nome e a quantidade.
+    Adicionar Produto: permite adicionar um novo produto ao inventário, informando o nome e a quantidade.
   </li>
   <li>
-    Listar Produtos: Exibe a lista de todos os produtos presentes no inventário com seu nome, quantidade e ID.
+    Listar Produtos: exibe a lista de todos os produtos presentes no inventário com seu nome, quantidade e ID.
   </li>
   <li>
-    Deletar Produto: Remove um produto do inventário através do ID exclusivo.
+    Deletar Produto: remove um produto do inventário através do ID exclusivo.
   </li>
 </ul>
 
